@@ -367,7 +367,7 @@ function applyToolCall(
             data: { label: label ?? "" },
             markerEnd: {
               type: "arrowclosed",
-              color: "rgba(255,255,255,0.4)",
+              color: "var(--edge-arrow)",
               width: 16,
               height: 16,
             },

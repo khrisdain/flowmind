@@ -33,7 +33,7 @@ const nodeTypes = { canvasNode: CanvasNodeComponent }
 const edgeTypes = { canvasEdge: CanvasEdgeComponent }
 
 const CONNECTION_LINE_STYLE: React.CSSProperties = {
-  stroke: "rgba(255,255,255,0.4)",
+  stroke: "var(--edge-arrow)",
   strokeWidth: 1.5,
   strokeLinecap: "round",
 }
@@ -181,7 +181,7 @@ export function CanvasEditor({ projectId, pendingTemplate, onTemplateImported, o
             data: { label: "" },
             markerEnd: {
               type: MarkerType.ArrowClosed,
-              color: "rgba(255,255,255,0.4)",
+              color: "var(--edge-arrow)",
               width: 16,
               height: 16,
             },

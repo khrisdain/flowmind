@@ -2,6 +2,23 @@
   "name": "ghost-ai",
   "version": "0.1.0",
   "private": true,
+  "description": "<div align=\"center\">   <br />     <a href=\"https://youtu.be/14RP8liACqo\" target=\"_blank\">       <img src=\"public/readme/readme-hero.webp\" alt=\"Project Banner\">     </a>   <br />",
+  "homepage": "https://github.com/adrianhajdin/ghost-ai#readme",
+  "bugs": {
+    "url": "https://github.com/adrianhajdin/ghost-ai/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adrianhajdin/ghost-ai.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "module",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs",
+    "lib": "lib"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",

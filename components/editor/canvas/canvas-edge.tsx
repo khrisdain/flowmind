@@ -48,7 +48,7 @@ export function CanvasEdgeComponent({
 
   const label = data?.label ?? ""
   const isActive = selected || isHovered || isEditing
-  const stroke = isActive ? "rgba(255,255,255,0.7)" : "rgba(255,255,255,0.35)"
+  const stroke = isActive ? "var(--edge-active)" : "var(--edge-rest)"
 
   const startEditing = useCallback(
     (e: React.MouseEvent) => {
@@ -122,7 +122,7 @@ export function CanvasEdgeComponent({
                 width: `${Math.max((draftLabel.length + 2) * 8, 64)}px`,
                 background: "var(--color-bg-surface)",
                 color: "var(--color-text-primary)",
-                border: "1px solid rgba(255,255,255,0.25)",
+                border: "1px solid var(--edge-label-border)",
                 borderRadius: 6,
                 padding: "2px 8px",
                 fontSize: 12,
@@ -138,7 +138,7 @@ export function CanvasEdgeComponent({
               style={{
                 background: "var(--color-bg-surface)",
                 color: "var(--color-text-primary)",
-                border: "1px solid rgba(255,255,255,0.15)",
+                border: "1px solid var(--edge-label-border)",
                 borderRadius: 9999,
                 padding: "2px 10px",
                 fontSize: 12,
@@ -155,7 +155,7 @@ export function CanvasEdgeComponent({
               onMouseDown={(e) => e.stopPropagation()}
               onPointerDown={(e) => e.stopPropagation()}
               style={{
-                color: "rgba(255,255,255,0.3)",
+                color: "var(--edge-hint)",
                 fontSize: 11,
                 cursor: "pointer",
                 padding: "2px 8px",

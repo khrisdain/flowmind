@@ -9,19 +9,19 @@ export async function POST(request: Request) {
   const identity = await getCurrentProjectIdentity();
 
   if (!identity.userId) {
-    return new Response("Unauthorized", { status: 401 });
+    return Response.json({ error: "Unauthorized" }, { status: 401 });
   }
 
   const { room } = await request.json();
 
   if (!room || typeof room !== "string") {
-    return new Response("Bad Request", { status: 400 });
+    return Response.json({ error: "Bad Request" }, { status: 400 });
   }
 
   const hasAccess = await userHasProjectAccess(room, identity);
 
   if (!hasAccess) {
-    return new Response("Forbidden", { status: 403 });
+    return Response.json({ error: "Forbidden" }, { status: 403 });
   }
 
   const lb = getLiveblocks();

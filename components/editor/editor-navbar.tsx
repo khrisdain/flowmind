@@ -3,6 +3,7 @@
 import { LayoutTemplate, PanelLeftClose, PanelLeftOpen, Save, Share2, Sparkles } from "lucide-react"
 import { UserButton } from "@clerk/nextjs"
 import { Button } from "@/components/ui/button"
+import { ThemeToggle } from "@/components/theme-toggle"
 import type { SaveStatus } from "@/hooks/use-canvas-autosave"
 
 interface EditorNavbarProps {
@@ -103,6 +104,7 @@ export function EditorNavbar({
           </>
         ) : null}
 
+        <ThemeToggle />
         {!onToggleAiSidebar ? <UserButton /> : null}
       </div>
     </header>

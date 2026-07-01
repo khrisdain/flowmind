@@ -1,5 +1,7 @@
+"use client"
 import { SignIn } from "@clerk/nextjs"
 import { BrainCircuit, Share2, ScrollText } from "lucide-react"
+import { ThemeToggle } from "@/components/theme-toggle"
 
 const features = [
   {
@@ -27,6 +29,7 @@ export default function SignInPage() {
     <main className="min-h-screen flex">
       <div className="hidden lg:flex w-1/2 flex-col bg-bg-surface border-r border-border-default">
         <div className="px-12 pt-10">
+          <div className="flex items-center justify-between">
           <div className="flex items-center gap-2.5">
             <div className="h-7 w-7 rounded-lg bg-accent-primary flex items-center justify-center shrink-0">
               <span
@@ -39,6 +42,8 @@ export default function SignInPage() {
             <span className="text-sm font-semibold text-text-primary">
               Ghost AI
             </span>
+          </div>
+          <ThemeToggle />
           </div>
         </div>
 
